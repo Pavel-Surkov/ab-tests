@@ -88,7 +88,7 @@ $include-column-box-sizing: true !default;
 @import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import 'layout/header', 'layout/footer', 'layout/aside';
 
 // 5. Components
 @import 'components/button';
@@ -97,7 +97,7 @@ $include-column-box-sizing: true !default;
 @import 'pages/profile';
 
 // 7. Components
-@import 'components/button', 'components/title', 'components/navbar';
+@import 'components/button', 'components/title', 'components/navbar', 'components/badges', 'components/badge';
 
 // 8. Themes
 @import 'themes/default';

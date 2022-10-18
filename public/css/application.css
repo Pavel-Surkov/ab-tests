@@ -481,6 +481,11 @@ table {
   padding: 0;
   margin: 0; }
 
+.aside-primary {
+  background: #27747a;
+  padding: 0 16px;
+  padding-bottom: 32px; }
+
 .profile {
   display: grid;
   grid-template-columns: 230px calc(100% - 230px);
@@ -514,21 +519,80 @@ table {
     font-size: 1.6rem;
     line-height: calc(24 / 16); } }
 
-.navbar {
-  background: #27747a; }
-  .navbar-brand {
+.navbar-brand {
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: calc(32.38 / 24);
+  font-family: "AbrilFatface", sans-serif; }
+
+.navbar-profile {
+  background: rgba(255, 255, 255, 0.8);
+  border: 0.5px solid #e2def9;
+  border-radius: 2px;
+  -webkit-box-shadow: -28px 22px 45px rgba(27, 29, 66, 0.139423);
+          box-shadow: -28px 22px 45px rgba(27, 29, 66, 0.139423);
+  margin-top: 39px;
+  padding: 5px 17px; }
+  .navbar-profile img {
+    border-radius: 50%;
+    border: 0.5px solid #fffcf8; }
+  .navbar-profile__info {
+    margin-left: 7px; }
+    .navbar-profile__info p {
+      font-family: "Nunito", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: calc(13.5 / 10);
+      color: #27747a; }
+    .navbar-profile__info h3 {
+      font-family: "Nunito", Arial, sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      line-height: calc(16.37 / 12);
+      color: #27747a; }
+
+.navbar-nav {
+  padding: 0 10px;
+  margin-top: 24px; }
+
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: calc(21 / 14);
+  display: inline-block; }
+  .navbar .nav-link.disabled {
+    opacity: 0.5; }
+  .navbar .nav-link img {
+    margin-right: 16px; }
+
+.navbar .nav-item {
+  margin-bottom: 21px; }
+  .navbar .nav-item:last-child {
+    margin-bottom: 0; }
+
+.badges {
+  margin-top: 202px; }
+  .badges-title {
     color: #fff;
-    font-size: 2.4rem;
-    line-height: calc(32.38 / 24);
+    font-size: 1.8rem;
+    line-height: calc(24.28 / 18);
     font-family: "AbrilFatface", sans-serif; }
-  .navbar-profile__info p {
-    font-family: "Nunito", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: calc(13.5 / 10); }
-  .navbar-profile__info h3 {
-    font-family: "Nunito", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    line-height: calc(16.37 / 12);
-    margin-bottom: 1px; }
+  .badges-wrapper {
+    display: grid;
+    gap: 12px; }
+
+.badge {
+  padding: 0.583em 0.917em;
+  border-radius: 2px;
+  border: 1px solid #27747a;
+  font-size: 1.2rem;
+  line-height: calc(18 / 12);
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  text-align: center;
+  color: #27747a; }
+  .badge-white {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.417em 0.667em; }

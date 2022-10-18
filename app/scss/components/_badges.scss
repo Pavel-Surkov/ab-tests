@@ -1,0 +1,12 @@
+.badges {
+	margin-top: 202px;
+	&-title {
+		color: $white;
+		@include font(1.8rem, calc(24.28 / 18));
+		font-family: $title-font;
+	}
+	&-wrapper {
+		display: grid;
+		gap: 12px;
+	}
+}

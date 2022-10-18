@@ -1,0 +1,15 @@
+.badge {
+	padding: 0.583em 0.917em;
+	border-radius: 2px;
+	border: 1px solid $green-dark-300;
+	@include font(1.2rem, calc(18 / 12));
+	font-weight: 600;
+	font-family: $font;
+	text-align: center;
+	color: $green-dark-300;
+	&-white {
+		color: $white;
+		border: 1px solid $white;
+		padding: 0.417em 0.667em;
+	}
+}

@@ -1,23 +1,56 @@
 .navbar {
-	background: $green-dark-300;
 	&-brand {
 		color: $white;
 		@include font(2.4rem, calc(32.38 / 24));
 		font-family: $title-font;
 	}
 	&-profile {
+		background: rgba($white, 0.8);
+		border: 0.5px solid $pink-300;
+		border-radius: 2px;
+		box-shadow: -28px 22px 45px rgba(27, 29, 66, 0.139423);
+		margin-top: 39px;
+		padding: 5px 17px;
+		& img {
+			border-radius: 50%;
+			border: 0.5px solid $light-200;
+		}
 		&__info {
+			margin-left: 7px;
 			& p {
 				font-family: $font-secondary;
 				font-weight: 600;
 				@include font(1rem, calc(13.5 / 10));
+				color: $green-dark-300;
 			}
 			& h3 {
 				font-family: $font-secondary;
 				font-weight: 800;
 				@include font(1.2rem, calc(16.37 / 12));
-				margin-bottom: 1px;
+				color: $green-dark-300;
 			}
+		}
+	}
+	&-nav {
+		padding: 0 10px;
+		margin-top: 24px;
+	}
+	& .nav-link {
+		color: $white;
+		font-weight: 500;
+		@include font(1.4rem, calc(21 / 14));
+		display: inline-block;
+		&.disabled {
+			opacity: 0.5;
+		}
+		& img {
+			margin-right: 16px;
+		}
+	}
+	& .nav-item {
+		margin-bottom: 21px;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
