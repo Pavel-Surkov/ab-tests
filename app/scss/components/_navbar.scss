@@ -1,0 +1,23 @@
+.navbar {
+	background: $green-dark-300;
+	&-brand {
+		color: $white;
+		@include font(2.4rem, calc(32.38 / 24));
+		font-family: $title-font;
+	}
+	&-profile {
+		&__info {
+			& p {
+				font-family: $font-secondary;
+				font-weight: 600;
+				@include font(1rem, calc(13.5 / 10));
+			}
+			& h3 {
+				font-family: $font-secondary;
+				font-weight: 800;
+				@include font(1.2rem, calc(16.37 / 12));
+				margin-bottom: 1px;
+			}
+		}
+	}
+}

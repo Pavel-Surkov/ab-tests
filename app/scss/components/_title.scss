@@ -1,14 +1,18 @@
 .title {
 	font-family: $font;
-	@include font(1.6rem, 21.76);
+	@include font(1.6rem, calc(21.76 / 16));
 	color: $purple-300;
 	font-weight: 600;
+	margin: 0;
 	&_size {
 		&-l {
-			@include font(2rem, 30);
+			@include font(2rem, calc(30 / 20));
 		}
 		&-m {
-			@include font(1.8rem, 27);
+			@include font(1.8rem, calc(27 / 18));
+		}
+		&-s {
+			@include font(1.2rem, calc(18 / 12));
 		}
 	}
 }
@@ -17,10 +21,10 @@
 	.title {
 		&_size {
 			&-l {
-				@include font(1.6rem, 24);
+				@include font(1.6rem, calc(24 / 16));
 			}
 			&-m {
-				@include font(1.6rem, 24);
+				@include font(1.6rem, calc(24 / 16));
 			}
 		}
 	}

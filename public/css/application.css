@@ -452,6 +452,27 @@ table {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+
 /**
  * Basic typography style for copy text
  */
@@ -460,23 +481,54 @@ table {
   padding: 0;
   margin: 0; }
 
+.profile {
+  display: grid;
+  grid-template-columns: 230px calc(100% - 230px);
+  background: #f3f2ef;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
 .title {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1.6rem;
-  line-height: calc($lineheight / $size);
+  line-height: calc(21.76 / 16);
   color: #330033;
-  font-weight: 600; }
+  font-weight: 600;
+  margin: 0; }
   .title_size-l {
     font-size: 2rem;
-    line-height: calc($lineheight / $size); }
+    line-height: calc(30 / 20); }
   .title_size-m {
     font-size: 1.8rem;
-    line-height: calc($lineheight / $size); }
+    line-height: calc(27 / 18); }
+  .title_size-s {
+    font-size: 1.2rem;
+    line-height: calc(18 / 12); }
 
 @media screen and (max-width: 991px) {
   .title_size-l {
     font-size: 1.6rem;
-    line-height: calc($lineheight / $size); }
+    line-height: calc(24 / 16); }
   .title_size-m {
     font-size: 1.6rem;
-    line-height: calc($lineheight / $size); } }
+    line-height: calc(24 / 16); } }
+
+.navbar {
+  background: #27747a; }
+  .navbar-brand {
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: calc(32.38 / 24);
+    font-family: "AbrilFatface", sans-serif; }
+  .navbar-profile__info p {
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: calc(13.5 / 10); }
+  .navbar-profile__info h3 {
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: calc(16.37 / 12);
+    margin-bottom: 1px; }
