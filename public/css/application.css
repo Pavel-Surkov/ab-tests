@@ -459,3 +459,24 @@ table {
   list-style-type: none;
   padding: 0;
   margin: 0; }
+
+.title {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: calc($lineheight / $size);
+  color: #330033;
+  font-weight: 600; }
+  .title_size-l {
+    font-size: 2rem;
+    line-height: calc($lineheight / $size); }
+  .title_size-m {
+    font-size: 1.8rem;
+    line-height: calc($lineheight / $size); }
+
+@media screen and (max-width: 991px) {
+  .title_size-l {
+    font-size: 1.6rem;
+    line-height: calc($lineheight / $size); }
+  .title_size-m {
+    font-size: 1.6rem;
+    line-height: calc($lineheight / $size); } }

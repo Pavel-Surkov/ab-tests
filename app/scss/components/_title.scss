@@ -1,0 +1,27 @@
+.title {
+	font-family: $font;
+	@include font(1.6rem, 21.76);
+	color: $purple-300;
+	font-weight: 600;
+	&_size {
+		&-l {
+			@include font(2rem, 30);
+		}
+		&-m {
+			@include font(1.8rem, 27);
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.title {
+		&_size {
+			&-l {
+				@include font(1.6rem, 24);
+			}
+			&-m {
+				@include font(1.6rem, 24);
+			}
+		}
+	}
+}
