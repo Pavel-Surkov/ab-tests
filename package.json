@@ -1,7 +1,7 @@
 {
-  "name": "occupywallstreet",
+  "name": "",
   "version": "1.0.0",
-  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "description": "",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,8 @@
   "author": "UX Mind",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^2.27.7",
+    "gulp-sass": "^4.1.1"
   },
   "dependencies": {
     "autoprefixer": "^9.8.5",
@@ -19,7 +20,6 @@
     "gulp-core": "^0.1.3-alpha",
     "gulp-debug": "^4.0.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
     "node-sass": "^4.12.0"
   },
   "browserslist": [

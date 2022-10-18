@@ -3386,8 +3386,7 @@ html {
       position: absolute;
       width: 100%;
       top: 0;
-      left: 0;
-      overflow: hidden; }
+      left: 0; }
     html.is-locked .header .lang__link {
       background: #fff; }
 
@@ -3472,6 +3471,13 @@ table {
 
 :focus::-ms-input-placeholder {
   color: transparent; }
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("../fonts/NeueMachina-Medium.woff2") format("woff2"), url("../fonts/NeueMachina-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
 
 /**
  * Basic typography style for copy text
