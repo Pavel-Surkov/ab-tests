@@ -3,6 +3,7 @@
 	&-wrapper {
 		gap: 56px;
 		margin-top: 12px;
+		padding-bottom: 128px;
 	}
 	&-additional {
 		min-width: 216px;
@@ -39,6 +40,31 @@
 		background: $white;
 		&:not(:last-child) {
 			margin-bottom: 16px;
+		}
+		&-col {
+			min-height: 64px;
+			flex-shrink: 0;
+			flex-grow: 1;
+			max-width: 15.89%;
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+			&:not(:first-child),
+			&:not(:last-child) {
+				max-width: 14.67%;
+			}
+			&-title {
+				margin-top: 2px;
+				@include font(1.2rem, calc(18 / 12));
+				color: rgba($purple-300, 0.75);
+			}
+			&-res {
+				font-weight: 600;
+				@include font(1.4rem, calc(19 / 14));
+				color: $green-dark-300;
+				margin: 0;
+				margin-bottom: 2px;
+			}
 		}
 	}
 }

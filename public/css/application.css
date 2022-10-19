@@ -556,6 +556,17 @@ table {
   padding: 0.625em 1em;
   font-weight: 600; }
 
+.btn-green {
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  max-width: 124px;
+  background: #27747a;
+  font-size: 1rem;
+  line-height: calc(14 / 10);
+  padding: 0.5em 1em;
+  font-weight: 600; }
+
 .profile {
   display: grid;
   grid-template-columns: 230px calc(100% - 230px);
@@ -573,6 +584,17 @@ table {
   font-size: 1.6rem;
   line-height: calc(24 / 16);
   padding: 0.625em 1em;
+  font-weight: 600; }
+
+.btn-green {
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  max-width: 124px;
+  background: #27747a;
+  font-size: 1rem;
+  line-height: calc(14 / 10);
+  padding: 0.5em 1em;
   font-weight: 600; }
 
 .title {
@@ -690,7 +712,8 @@ table {
   padding: 0 60px 0 32px; }
   .content-wrapper {
     gap: 56px;
-    margin-top: 12px; }
+    margin-top: 12px;
+    padding-bottom: 128px; }
   .content-additional {
     min-width: 216px; }
   .content-section:not(:first-child) {
@@ -720,6 +743,30 @@ table {
     background: #fff; }
     .content-card:not(:last-child) {
       margin-bottom: 16px; }
+    .content-card-col {
+      min-height: 64px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      max-width: 15.89%; }
+      .content-card-col:not(:last-child) {
+        margin-right: 12px; }
+      .content-card-col:not(:first-child), .content-card-col:not(:last-child) {
+        max-width: 14.67%; }
+      .content-card-col-title {
+        margin-top: 2px;
+        font-size: 1.2rem;
+        line-height: calc(18 / 12);
+        color: rgba(51, 0, 51, 0.75); }
+      .content-card-col-res {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: calc(19 / 14);
+        color: #27747a;
+        margin: 0;
+        margin-bottom: 2px; }
 
 .search-input {
   border-radius: 0;

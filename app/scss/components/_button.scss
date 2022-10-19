@@ -9,4 +9,14 @@
 		padding: 0.625em 1em;
 		font-weight: 600;
 	}
+	&-green {
+		text-align: center;
+		color: $white;
+		border-radius: 2px;
+		max-width: 124px;
+		background: $green-dark-300;
+		@include font(1rem, calc(14 / 10));
+		padding: 0.5em 1em;
+		font-weight: 600;
+	}
 }
