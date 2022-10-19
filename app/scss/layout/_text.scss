@@ -1,0 +1,8 @@
+.text {
+	&_dark {
+		color: $purple-500;
+		@include font(1.4rem, calc(21 / 14));
+		font-weight: 600;
+		margin: 0;
+	}
+}

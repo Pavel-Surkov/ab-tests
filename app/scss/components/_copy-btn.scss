@@ -1,0 +1,21 @@
+.copy-btn {
+	color: $purple-300;
+	@include font(1.1rem, calc(16.5 / 11));
+	font-weight: 500;
+	padding: 0.48em 0.77em 0.61em 1.91em;
+	border: 0.8px solid $purple-300;
+	border-radius: 1.3px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 4.5px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 13px;
+		height: 13px;
+		background: icon('file-copy-link-icon.png') no-repeat 50% / cover;
+	}
+}

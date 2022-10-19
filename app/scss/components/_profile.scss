@@ -1,0 +1,51 @@
+.profile {
+	&-info {
+		background: $white;
+		border-radius: 8px;
+		padding: 20px;
+		padding-bottom: 62px;
+		display: grid;
+		grid-template-columns: calc(50% - 15px + 10px) calc(50% - 15px - 10px);
+		grid-gap: 30px;
+		position: relative;
+	}
+	&-section {
+		margin-bottom: 20px;
+		&-title {
+			margin-bottom: 8px;
+			color: rgba($purple-300, 0.75);
+		}
+		& p {
+			margin: 0;
+			margin-bottom: 4px;
+			@include font(1.6rem, calc(24 / 16));
+			color: $purple-300;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-badges {
+		display: grid;
+		grid-template-columns: auto;
+		grid-gap: 8px;
+	}
+	&-hero {
+		& img {
+			margin-right: 14px;
+			border: 5px solid $white;
+		}
+		&-bio {
+			& p {
+				&:first-child {
+					margin-bottom: 4px;
+				}
+				&:last-child {
+					margin: 0;
+					@include font(1.2rem, calc(18 / 12));
+					color: rgba($purple-300, 0.75);
+				}
+			}
+		}
+	}
+}
