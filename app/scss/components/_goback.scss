@@ -1,0 +1,18 @@
+.goback {
+	margin-top: 12px;
+	&-btn {
+		color: $green-dark-300;
+		@include font(1.6rem, calc(24 / 16));
+		outline: none;
+		border: none;
+		&:hover,
+		&:active,
+		&:first-child:active {
+			color: $green-dark-300;
+		}
+		& span {
+			display: inline-block;
+			margin-right: 12px;
+		}
+	}
+}

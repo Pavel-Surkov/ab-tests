@@ -98,7 +98,7 @@ $include-column-box-sizing: true !default;
 
 // 7. Components
 @import 'components/button', 'components/title', 'components/navbar', 'components/badges', 'components/badge',
-	'components/content';
+	'components/content', 'components/search', 'components/goback';
 
 // 8. Themes
 @import 'themes/default';

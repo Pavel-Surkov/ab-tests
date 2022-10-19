@@ -489,6 +489,43 @@ table {
   text-decoration: none;
   margin-right: auto; }
 
+.header-search {
+  position: relative;
+  margin-right: 39px;
+  max-width: 415px;
+  width: 100%; }
+  .header-search .search-btn {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+.header-notification {
+  margin-right: 42px; }
+  .header-notification-btn {
+    position: relative; }
+    .header-notification-btn.new-messages::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: #27747a;
+      border-radius: 50%;
+      top: 3px;
+      right: 1px; }
+
+.header-profile-img {
+  margin-right: 7px; }
+
+.header-profile-btn {
+  font-size: 1.3rem;
+  line-height: calc(20 / 13); }
+  .header-profile-btn::after {
+    margin-left: 1em;
+    border-top-color: #27747a; }
+
 .aside-primary {
   background: #27747a;
   padding: 0 16px;
@@ -606,4 +643,56 @@ table {
     padding: 0.417em 0.667em; }
 
 .content {
-  padding: 0 60px 0 30px; }
+  padding: 0 60px 0 32px; }
+  .content-wrapper {
+    gap: 56px;
+    margin-top: 12px; }
+  .content-additional {
+    min-width: 216px; }
+
+.search-input {
+  border-radius: 0;
+  background: rgba(39, 116, 122, 0.06);
+  padding: 10px 21px 9px;
+  border: none;
+  color: #27747a;
+  font-size: 1.4rem;
+  line-height: calc(21 / 14); }
+  .search-input::-webkit-input-placeholder {
+    color: #27747a;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+  .search-input::-moz-placeholder {
+    color: #27747a;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+  .search-input:-ms-input-placeholder {
+    color: #27747a;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+  .search-input::-ms-input-placeholder {
+    color: #27747a;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+  .search-input::placeholder {
+    color: #27747a;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+
+.search-btn {
+  border: none;
+  background: transparent; }
+
+.goback {
+  margin-top: 12px; }
+  .goback-btn {
+    color: #27747a;
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+    outline: none;
+    border: none; }
+    .goback-btn:hover, .goback-btn:active, .goback-btn:first-child:active {
+      color: #27747a; }
+    .goback-btn span {
+      display: inline-block;
+      margin-right: 12px; }

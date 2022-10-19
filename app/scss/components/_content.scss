@@ -1,3 +1,10 @@
 .content {
-	padding: 0 60px 0 30px;
+	padding: 0 60px 0 32px;
+	&-wrapper {
+		gap: 56px;
+		margin-top: 12px;
+	}
+	&-additional {
+		min-width: 216px;
+	}
 }
