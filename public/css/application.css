@@ -481,6 +481,14 @@ table {
   padding: 0;
   margin: 0; }
 
+.header-brand {
+  font-size: 2.4rem;
+  line-height: calc(32.38 / 24);
+  font-family: "AbrilFatface", sans-serif;
+  color: #27747a;
+  text-decoration: none;
+  margin-right: auto; }
+
 .aside-primary {
   background: #27747a;
   padding: 0 16px;
@@ -596,3 +604,6 @@ table {
     color: #fff;
     border: 1px solid #fff;
     padding: 0.417em 0.667em; }
+
+.content {
+  padding: 0 60px 0 30px; }

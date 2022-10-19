@@ -1,0 +1,9 @@
+.header {
+	&-brand {
+		@include font(2.4rem, calc(32.38 / 24));
+		font-family: $title-font;
+		color: $green-dark-300;
+		text-decoration: none;
+		margin-right: auto;
+	}
+}
