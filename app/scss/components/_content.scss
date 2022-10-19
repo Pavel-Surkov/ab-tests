@@ -7,4 +7,38 @@
 	&-additional {
 		min-width: 216px;
 	}
+	&-section {
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
+		&-top {
+			margin-bottom: 24px;
+		}
+		&-title {
+			@include font(1.8rem, calc(27 / 18));
+			font-weight: 400;
+			& b {
+				font-weight: 700;
+				color: $green-dark-300;
+			}
+		}
+		&-dropdown {
+			text-align: left;
+			&::after {
+				position: absolute;
+				right: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+				border-top: 0.45em solid;
+			}
+		}
+	}
+	&-card {
+		padding: 10px 12px;
+		border-radius: 8px;
+		background: $white;
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
 }

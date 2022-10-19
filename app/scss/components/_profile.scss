@@ -26,9 +26,7 @@
 		}
 	}
 	&-badges {
-		display: grid;
-		grid-template-columns: auto;
-		grid-gap: 8px;
+		gap: 8px;
 	}
 	&-hero {
 		& img {

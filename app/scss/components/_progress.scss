@@ -1,0 +1,22 @@
+.progress {
+	&-round {
+		width: 100px;
+		height: 100px;
+		display: grid;
+		place-items: center;
+		margin-right: 20px;
+	}
+	&-res {
+		margin: 0;
+		font-weight: 700;
+		@include font(1.6rem, calc(24 / 16));
+		color: $green-dark-300;
+	}
+	&-description {
+		& p {
+			max-width: 604px;
+			@include font(1.6rem, calc(24 / 16));
+			margin: 0;
+		}
+	}
+}
