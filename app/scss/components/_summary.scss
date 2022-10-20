@@ -14,5 +14,27 @@
 		& span:last-child {
 			color: $purple-500;
 		}
+		& p {
+			color: rgba($purple-300, 0.75);
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.summary {
+		margin: 0;
+		margin-bottom: 12px;
+		&-block {
+			margin-bottom: 12px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& span {
+				@include font(1.2rem, calc(18 / 12));
+			}
+			& span:last-child {
+				color: $purple-500;
+			}
+		}
 	}
 }

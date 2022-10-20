@@ -47,3 +47,37 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.profile {
+		&-section {
+			margin-bottom: 14px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& p {
+				@include font(1.4rem, calc(21 / 14));
+				margin-bottom: 2px;
+			}
+		}
+		&-info {
+			grid-template-columns: 100%;
+			grid-gap: 0;
+			padding: 16px 20px 20px;
+			border-radius: 4px;
+		}
+		&-hero {
+			& img {
+				margin-right: 0;
+				border: 5px solid $white;
+				margin-bottom: 4px;
+			}
+			&-bio {
+				max-width: 230px;
+			}
+		}
+		&-badges {
+			gap: 6px;
+		}
+	}
+}

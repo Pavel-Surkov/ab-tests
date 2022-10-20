@@ -91,7 +91,7 @@ $include-column-box-sizing: true !default;
 @import 'layout/header', 'layout/footer', 'layout/aside', 'layout/text', 'layout/m-menu', 'layout/blocker';
 
 // 5. Components
-@import 'components/button';
+@import 'components/button', 'components/link';
 
 // 6. Page-specific styles
 @import 'pages/profile';
