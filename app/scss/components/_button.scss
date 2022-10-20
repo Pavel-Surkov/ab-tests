@@ -20,3 +20,12 @@
 		font-weight: 600;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.btn {
+		&-orange {
+			@include font(1.4rem, calc(21 / 14));
+			min-width: 240px;
+		}
+	}
+}

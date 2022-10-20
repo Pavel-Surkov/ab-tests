@@ -20,3 +20,22 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.progress {
+		&-description {
+			& p {
+				@include font(1rem, calc(15 / 10));
+			}
+		}
+		&-round {
+			width: 87px;
+			height: 87px;
+			margin-right: 15px;
+			flex-shrink: 0;
+		}
+		&-res {
+			@include font(1.45rem, calc(22 / 14.5));
+		}
+	}
+}

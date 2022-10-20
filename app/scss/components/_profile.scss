@@ -74,6 +74,9 @@
 			}
 			&-bio {
 				max-width: 230px;
+				& p {
+					@include font(1.6rem, calc(24 / 16));
+				}
 			}
 		}
 		&-badges {

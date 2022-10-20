@@ -635,6 +635,12 @@ table {
   padding: 0.5em 1em;
   font-weight: 600; }
 
+@media screen and (max-width: 991px) {
+  .btn-orange {
+    font-size: 1.4rem;
+    line-height: calc(21 / 14);
+    min-width: 240px; } }
+
 .link {
   font-size: 1.4rem;
   line-height: calc(21 / 14); }
@@ -677,6 +683,12 @@ table {
   line-height: calc(14 / 10);
   padding: 0.5em 1em;
   font-weight: 600; }
+
+@media screen and (max-width: 991px) {
+  .btn-orange {
+    font-size: 1.4rem;
+    line-height: calc(21 / 14);
+    min-width: 240px; } }
 
 .title {
   font-family: "Poppins", Arial, sans-serif;
@@ -855,6 +867,7 @@ table {
   .content-section-top {
     margin-bottom: 24px; }
   .content-section-title {
+    margin: 0;
     font-size: 1.8rem;
     line-height: calc(27 / 18);
     font-weight: 400; }
@@ -906,7 +919,26 @@ table {
   .content {
     padding: 54px 20px 0; }
     .content-wrapper {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+    .content-section:not(:first-child) {
+      margin-top: 30px; }
+    .content-section-top {
+      margin-bottom: 16px;
+      gap: 12px; }
+      .content-section-top .dropdown {
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content; }
+    .content-section-title {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: calc(24 / 16); }
+    .content-card {
+      margin-bottom: 12px;
+      padding: 12px 13px 7px;
+      border-radius: 5px; }
+      .content-card:last-child {
+        margin-bottom: 0; } }
 
 .search-input {
   border-radius: 0;
@@ -1022,6 +1054,9 @@ table {
     margin-bottom: 4px; }
   .profile-hero-bio {
     max-width: 230px; }
+    .profile-hero-bio p {
+      font-size: 1.6rem;
+      line-height: calc(24 / 16); }
   .profile-badges {
     gap: 6px; } }
 
@@ -1096,3 +1131,17 @@ table {
   font-size: 1.6rem;
   line-height: calc(24 / 16);
   margin: 0; }
+
+@media screen and (max-width: 991px) {
+  .progress-description p {
+    font-size: 1rem;
+    line-height: calc(15 / 10); }
+  .progress-round {
+    width: 87px;
+    height: 87px;
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .progress-res {
+    font-size: 1.45rem;
+    line-height: calc(22 / 14.5); } }

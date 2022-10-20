@@ -16,6 +16,7 @@
 			margin-bottom: 24px;
 		}
 		&-title {
+			margin: 0;
 			@include font(1.8rem, calc(27 / 18));
 			font-weight: 400;
 			& b {
@@ -74,6 +75,30 @@
 		padding: 54px 20px 0;
 		&-wrapper {
 			margin-top: 20px;
+		}
+		&-section {
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+			&-top {
+				margin-bottom: 16px;
+				gap: 12px;
+				& .dropdown {
+					max-width: fit-content;
+				}
+			}
+			&-title {
+				margin: 0;
+				@include font(1.6rem, calc(24 / 16));
+			}
+		}
+		&-card {
+			margin-bottom: 12px;
+			padding: 12px 13px 7px;
+			border-radius: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
