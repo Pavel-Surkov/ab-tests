@@ -23,14 +23,20 @@
 <body>
 	<!-- Begin main -->
 	<main class="main profile">
-		<aside class="h-100 aside-primary">
-			<nav class="navbar navbar-expand-lg flex-column">
-				<a class="navbar-brand text-center text-uppercase p-0 mt-5 mx-auto" href="#">Brght</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+		<aside class="h-lg-100 aside-primary">
+			<nav class="navbar navbar-expand-lg flex-lg-column">
+				<a class="navbar-brand text-center text-uppercase p-0 mt-lg-5 mx-lg-auto" href="#">Brght</a>
+				<div class="header-notification d-flex d-lg-none align-items-center">
+					<button type="button" class="header-notification-btn new-messages p-0 d-flex justify-center align-center">
+						<img width="17" height="20" src="./img/icons/notification.svg" alt="notification">
+					</button>
+				</div>
+				<button class="d-lg-none navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
 				</button>
-				<div class="navbar-profile w-100 d-flex align-items-center">
+				<div class="navbar-profile w-100 d-none d-lg-flex align-items-center">
 					<div>
 						<img width="30" height="30" src="./img/Jacques.png" alt="profile image" />
 					</div>
@@ -39,7 +45,7 @@
 						<p class="m-0">Data scientist</p>
 					</div>
 				</div>
-				<div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+				<div class="collapse d-none d-lg-block navbar-collapse w-100">
 					<ul class="navbar-nav flex-column">
 						<li class="nav-item">
 							<a class="nav-link p-0 d-flex align-items-center" href="#">
@@ -74,7 +80,7 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="badges px-3">
+			<div class="badges d-none d-lg-block px-3">
 				<h2 class="badges-title mb-4">Badges</h2>
 				<div class="badges-wrapper">
 					<button class="badge badge-white text-start w-100">Top 85% of the TU Delft</button>
@@ -86,11 +92,11 @@
 		</aside>
 		<div class="content">
 			<!-- Begin header -->
-			<header class="header d-flex align-center pt-5">
+			<header class="header d-flex align-center flex-column flex-lg-row pt-lg-5">
 				<a class="header-brand d-inline-block" href="#">Profile Page</a>
-				<div class="header-search">
+				<form class="header-search">
 					<input type="text" class="w-100 search-input form-control" placeholder="Search" id="search" />
-					<button type="button" class="search-btn">
+					<button type="submit" class="search-btn">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								d="M6.85946 4.08925C8.48684 4.47807 9.7184 5.71999 9.99654 7.25326C10.0285 7.42851 10.1925 7.55273 10.3785 7.55273C10.3999 7.55273 10.4214 7.55116 10.4432 7.54769C10.6546 7.51482 10.7971 7.3297 10.7616 7.13431C10.4325 5.32193 8.977 3.85377 7.05307 3.39435C6.84552 3.34466 6.6341 3.46008 6.58066 3.65221C6.52739 3.8439 6.6521 4.03973 6.85946 4.08925Z"
@@ -103,13 +109,13 @@
 								fill="#27747A" />
 						</svg>
 					</button>
-				</div>
-				<div class="header-notification d-flex align-items-center">
+				</form>
+				<div class="header-notification d-none d-lg-flex align-items-center">
 					<button type="button" class="header-notification-btn new-messages p-0 d-flex justify-center align-center">
 						<img width="17" height="20" src="./img/icons/notification.svg" alt="notification" />
 					</button>
 				</div>
-				<div class="header-profile d-flex align-items-center">
+				<div class="header-profile d-none d-lg-flex align-items-center">
 					<div class="dropdown d-flex align-items-center">
 						<img class="header-profile-img" width="30" height="30" src="./img/Jacques.png" alt="profile image" />
 						<button class="header-profile-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -140,7 +146,7 @@
 					Go back
 				</button>
 			</div>
-			<div class="content-wrapper d-flex ps-1">
+			<div class="content-wrapper d-block d-lg-flex ps-1">
 				<div class="content-main flex-grow-1">
 					<div class="profile-info">
 						<div class="profile-col">
@@ -352,7 +358,62 @@
 	<footer class="footer">
 	</footer>
 	<!-- End footer -->
+	<div id="blocker" class="blocker"></div>
 	<!-- BEGIN MOBILE LAYOUT -->
+	<div class="m-menu d-lg-none" id="m-menu">
+		<div class="navbar-profile w-100 d-flex align-items-center">
+			<div>
+				<img width="30" height="30" src="./img/Jacques.png" alt="profile image" />
+			</div>
+			<div class="navbar-profile__info">
+				<h3 class="title title_size-xs">Jacques Huppes</h3>
+				<p class="m-0">Data scientist</p>
+			</div>
+		</div>
+		<div class="navbar-collapse w-100">
+			<ul class="navbar-nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/profile.png" alt="" />
+						Profile
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/create-test.png" alt="" />
+						Create Test
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/test-results.png" alt="" />
+						Test Results
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/personality-type.png" alt="" />
+						Personality type
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/personality-test.png" alt="" />
+						Personality test
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="badges px-3">
+			<h2 class="badges-title mb-4">Badges</h2>
+			<div class="badges-wrapper">
+				<button class="badge badge-white text-start w-100">Top 85% of the TU Delft</button>
+				<button class="badge badge-white text-start w-100">Top 91% of Amsterdam</button>
+				<button class="badge badge-white text-start w-100">Top 72% of data scientists</button>
+				<button class="badge badge-white text-start w-100">Top 93% of the Netherlands</button>
+			</div>
+		</div>
+	</div>
 	<!-- END MOBILE LAYOUT -->
 	<!-- BEGIN scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

@@ -53,4 +53,58 @@
 			margin-bottom: 0;
 		}
 	}
+	&-toggler {
+		position: relative;
+		padding: 6px;
+		width: 12px;
+		height: 12px;
+		box-sizing: content-box;
+		border: none;
+		& span {
+			position: absolute;
+			width: 12px;
+			height: 1px;
+			border-radius: 1px;
+			background: $white;
+			top: 8px;
+			left: 6px;
+			&:last-child {
+				top: 12px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.navbar {
+		padding: 0;
+		&-brand {
+			margin-right: auto;
+			@include font(2rem, calc(27 / 20));
+		}
+		&-profile {
+			margin: 0;
+		}
+	}
+	.nav {
+		&-link {
+			color: $white;
+			font-weight: 500;
+			@include font(1.4rem, calc(21 / 14));
+			display: inline-block;
+			&.disabled {
+				opacity: 0.5;
+				color: $white;
+			}
+			& img {
+				margin-right: 16px;
+			}
+		}
+		&-item {
+			margin-bottom: 21px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }

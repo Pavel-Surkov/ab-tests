@@ -16,3 +16,14 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.goback {
+		&-btn {
+			@include font(1.4rem, calc(21 / 14));
+			& span {
+				margin-right: 8px;
+			}
+		}
+	}
+}

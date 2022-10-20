@@ -4,3 +4,9 @@
 	background: $light-300;
 	align-items: stretch;
 }
+
+@media screen and (max-width: 991px) {
+	.profile {
+		grid-template-columns: 100%;
+	}
+}

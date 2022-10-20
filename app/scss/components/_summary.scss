@@ -1,7 +1,10 @@
 .summary {
 	margin-bottom: 40px;
+	&-wrapper {
+		gap: 34px;
+	}
 	&-col {
-		min-width: 163px;
+		min-width: calc(50% - 17px);
 	}
 	&-block {
 		margin-bottom: 20px;

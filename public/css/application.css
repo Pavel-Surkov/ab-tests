@@ -499,7 +499,7 @@ table {
 .header-search {
   position: relative;
   margin-right: 39px;
-  max-width: 415px;
+  max-width: 37.05357%;
   width: 100%; }
   .header-search .search-btn {
     position: absolute;
@@ -533,10 +533,39 @@ table {
     margin-left: 1em;
     border-top-color: #27747a; }
 
+@media screen and (max-width: 991px) {
+  .header {
+    padding-top: 20px; }
+    .header-notification {
+      margin: 0;
+      margin-right: 16px; }
+      .header-notification-btn.new-messages::after {
+        background: #efeeec; }
+    .header-search {
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin: 0;
+      margin-bottom: 12px;
+      max-width: 100%;
+      width: 450px; }
+    .header-brand {
+      font-size: 1.8rem;
+      line-height: calc(24 / 18); } }
+
 .aside-primary {
+  z-index: 5;
   background: #27747a;
   padding: 0 16px;
   padding-bottom: 32px; }
+
+@media screen and (max-width: 991px) {
+  .aside-primary {
+    padding: 14px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; } }
 
 .text_dark {
   color: #573457;
@@ -544,6 +573,25 @@ table {
   line-height: calc(21 / 14);
   font-weight: 600;
   margin: 0; }
+
+.m-menu {
+  position: fixed;
+  z-index: 4;
+  top: 54px;
+  right: 0;
+  min-width: 238px;
+  background: #27747a;
+  padding: 20px;
+  padding-bottom: 40px; }
+
+.blocker {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #2020204d;
+  pointer-events: none; }
 
 .btn-orange {
   text-align: center;
@@ -574,6 +622,10 @@ table {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
+
+@media screen and (max-width: 991px) {
+  .profile {
+    grid-template-columns: 100%; } }
 
 .btn-orange {
   text-align: center;
@@ -681,6 +733,50 @@ table {
   .navbar .nav-item:last-child {
     margin-bottom: 0; }
 
+.navbar-toggler {
+  position: relative;
+  padding: 6px;
+  width: 12px;
+  height: 12px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: none; }
+  .navbar-toggler span {
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    border-radius: 1px;
+    background: #fff;
+    top: 8px;
+    left: 6px; }
+    .navbar-toggler span:last-child {
+      top: 12px; }
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    padding: 0; }
+    .navbar-brand {
+      margin-right: auto;
+      font-size: 2rem;
+      line-height: calc(27 / 20); }
+    .navbar-profile {
+      margin: 0; }
+  .nav-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: calc(21 / 14);
+    display: inline-block; }
+    .nav-link.disabled {
+      opacity: 0.5;
+      color: #fff; }
+    .nav-link img {
+      margin-right: 16px; }
+  .nav-item {
+    margin-bottom: 21px; }
+    .nav-item:last-child {
+      margin-bottom: 0; } }
+
 .badges {
   margin-top: 202px; }
   .badges-title {
@@ -691,6 +787,10 @@ table {
   .badges-wrapper {
     display: grid;
     gap: 12px; }
+
+@media screen and (max-width: 991px) {
+  .badges {
+    margin-top: 30px; } }
 
 .badge {
   padding: 0.583em 0.917em;
@@ -712,7 +812,7 @@ table {
   padding: 0 60px 0 32px; }
   .content-wrapper {
     gap: 56px;
-    margin-top: 12px;
+    margin-top: 32px;
     padding-bottom: 128px; }
   .content-additional {
     min-width: 216px; }
@@ -768,6 +868,12 @@ table {
         margin: 0;
         margin-bottom: 2px; }
 
+@media screen and (max-width: 991px) {
+  .content {
+    padding: 54px 20px 0; }
+    .content-wrapper {
+      margin-top: 20px; } }
+
 .search-input {
   border-radius: 0;
   background: rgba(39, 116, 122, 0.06);
@@ -814,6 +920,13 @@ table {
     .goback-btn span {
       display: inline-block;
       margin-right: 12px; }
+
+@media screen and (max-width: 991px) {
+  .goback-btn {
+    font-size: 1.4rem;
+    line-height: calc(21 / 14); }
+    .goback-btn span {
+      margin-right: 8px; } }
 
 .profile-info {
   background: #fff;
@@ -880,8 +993,10 @@ table {
 
 .summary {
   margin-bottom: 40px; }
+  .summary-wrapper {
+    gap: 34px; }
   .summary-col {
-    min-width: 163px; }
+    min-width: calc(50% - 17px); }
   .summary-block {
     margin-bottom: 20px; }
     .summary-block:last-child {

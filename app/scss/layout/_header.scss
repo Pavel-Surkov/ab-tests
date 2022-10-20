@@ -9,7 +9,7 @@
 	&-search {
 		position: relative;
 		margin-right: 39px;
-		max-width: 415px;
+		max-width: 37.05357%;
 		width: 100%;
 		& .search-btn {
 			position: absolute;
@@ -44,6 +44,31 @@
 				margin-left: 1em;
 				border-top-color: $green-dark-300;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		padding-top: 20px;
+		&-notification {
+			margin: 0;
+			margin-right: 16px;
+			&-btn {
+				&.new-messages::after {
+					background: $light-400;
+				}
+			}
+		}
+		&-search {
+			order: -1;
+			margin: 0;
+			margin-bottom: 12px;
+			max-width: 100%;
+			width: 450px;
+		}
+		&-brand {
+			@include font(1.8rem, calc(24 / 18));
 		}
 	}
 }
