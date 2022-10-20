@@ -582,7 +582,19 @@ table {
   min-width: 238px;
   background: #27747a;
   padding: 20px;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
+  .m-menu-opened {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
 
 .blocker {
   width: 100vw;
@@ -590,8 +602,12 @@ table {
   position: fixed;
   top: 0;
   left: 0;
-  background: #2020204d;
-  pointer-events: none; }
+  pointer-events: none;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s; }
+  .blocker-opened {
+    background: #2020204d; }
 
 .btn-orange {
   text-align: center;
@@ -741,6 +757,11 @@ table {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   border: none; }
+  .navbar-toggler:hover, .navbar-toggler:active, .navbar-toggler:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .navbar-toggler span {
     position: absolute;
     width: 12px;

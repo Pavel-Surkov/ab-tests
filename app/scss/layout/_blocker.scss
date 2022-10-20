@@ -4,6 +4,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #2020204d;
 	pointer-events: none;
+	transition: background 0.3s;
+	&-opened {
+		background: #2020204d;
+	}
 }
