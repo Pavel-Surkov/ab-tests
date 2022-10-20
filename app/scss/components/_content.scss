@@ -25,13 +25,16 @@
 			}
 		}
 		&-dropdown {
+			font-weight: 500;
 			text-align: left;
 			&::after {
 				position: absolute;
 				right: 16px;
 				top: 50%;
 				transform: translateY(-50%);
-				border-top: 0.45em solid;
+				border-top: 0.5em solid;
+				border-left: 0.4em solid transparent;
+				border-right: 0.4em solid transparent;
 			}
 		}
 	}
@@ -96,8 +99,21 @@
 			margin-bottom: 12px;
 			padding: 12px 13px 7px;
 			border-radius: 5px;
+			gap: 12px;
 			&:last-child {
 				margin-bottom: 0;
+			}
+			&-col {
+				min-height: auto;
+				&-title {
+					margin: 0;
+					margin-bottom: 6px;
+				}
+				&-res {
+					margin: 0;
+					font-weight: 500;
+					@include font(1.2rem, calc(18 / 12));
+				}
 			}
 		}
 	}

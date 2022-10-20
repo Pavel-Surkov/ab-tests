@@ -1,2 +1,17 @@
 .results {
+	& .content-card {
+		margin: 0;
+		border-bottom: 1px solid $light-400;
+		padding: 12px;
+		padding-bottom: 16px;
+		flex-wrap: wrap;
+		&:last-child {
+			border: none;
+		}
+		&-col {
+			max-width: none;
+			width: calc(50% - 6px);
+			margin: 0;
+		}
+	}
 }

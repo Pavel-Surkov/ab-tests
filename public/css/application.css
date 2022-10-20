@@ -875,6 +875,7 @@ table {
       font-weight: 700;
       color: #27747a; }
   .content-section-dropdown {
+    font-weight: 500;
     text-align: left; }
     .content-section-dropdown::after {
       position: absolute;
@@ -883,7 +884,9 @@ table {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
-      border-top: 0.45em solid; }
+      border-top: 0.5em solid;
+      border-left: 0.4em solid transparent;
+      border-right: 0.4em solid transparent; }
   .content-card {
     padding: 10px 12px;
     border-radius: 8px;
@@ -936,9 +939,20 @@ table {
     .content-card {
       margin-bottom: 12px;
       padding: 12px 13px 7px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      gap: 12px; }
       .content-card:last-child {
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+      .content-card-col {
+        min-height: auto; }
+        .content-card-col-title {
+          margin: 0;
+          margin-bottom: 6px; }
+        .content-card-col-res {
+          margin: 0;
+          font-weight: 500;
+          font-size: 1.2rem;
+          line-height: calc(18 / 12); } }
 
 .search-input {
   border-radius: 0;
@@ -1043,6 +1057,9 @@ table {
       font-size: 1.4rem;
       line-height: calc(21 / 14);
       margin-bottom: 2px; }
+      .profile-section p:last-child {
+        font-size: 1.2rem;
+        line-height: calc(18 / 12); }
   .profile-info {
     grid-template-columns: 100%;
     grid-gap: 0;
@@ -1053,7 +1070,7 @@ table {
     border: 5px solid #fff;
     margin-bottom: 4px; }
   .profile-hero-bio {
-    max-width: 230px; }
+    max-width: 211px; }
     .profile-hero-bio p {
       font-size: 1.6rem;
       line-height: calc(24 / 16); }
@@ -1145,3 +1162,17 @@ table {
   .progress-res {
     font-size: 1.45rem;
     line-height: calc(22 / 14.5); } }
+
+.results .content-card {
+  margin: 0;
+  border-bottom: 1px solid #efeeec;
+  padding: 12px;
+  padding-bottom: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .results .content-card:last-child {
+    border: none; }
+  .results .content-card-col {
+    max-width: none;
+    width: calc(50% - 6px);
+    margin: 0; }
