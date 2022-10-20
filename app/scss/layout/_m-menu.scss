@@ -9,6 +9,8 @@
 	padding-bottom: 40px;
 	transform: translateX(100%);
 	transition: transform 0.3s;
+	overflow-y: auto;
+	max-height: calc(100vh - 54px);
 	&-opened {
 		transform: none;
 	}

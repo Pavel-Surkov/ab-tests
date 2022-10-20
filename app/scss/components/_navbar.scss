@@ -3,6 +3,7 @@
 		color: $white;
 		@include font(2.4rem, calc(32.38 / 24));
 		font-family: $title-font;
+		transition: color 0.3s;
 	}
 	&-profile {
 		background: rgba($white, 0.8);
@@ -73,10 +74,28 @@
 			height: 1px;
 			border-radius: 1px;
 			background: $white;
-			top: 8px;
-			left: 6px;
+			top: 50%;
+			left: 50%;
+			transition: all 0.3s;
+			&:first-child {
+				transform: translate(-50%, calc(-50% - 4px));
+			}
 			&:last-child {
-				top: 12px;
+				transform: translate(-50%, calc(-50% + 1px));
+			}
+		}
+		&-close {
+			& span {
+				width: 19px;
+				background: $green-dark-300;
+				&:first-child {
+					transform: translate(-50%, -50%) rotate(45deg);
+					// transform: rotate(45deg) translateY(2px);
+				}
+				&:last-child {
+					transform: translate(-50%, -50%) rotate(-45deg);
+					// transform: rotate(-45deg) translateY(-2px);
+				}
 			}
 		}
 	}

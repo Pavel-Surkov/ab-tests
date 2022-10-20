@@ -14,5 +14,15 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		transition: background 0.3s;
+		&-light {
+			background: $light-600;
+			& .navbar-brand {
+				color: $green-dark-300;
+			}
+			& .header-notification-btn.new-messages::after {
+				background: $green-dark-300;
+			}
+		}
 	}
 }
