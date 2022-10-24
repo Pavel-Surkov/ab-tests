@@ -1604,7 +1604,9 @@ table {
   display: grid;
   place-items: center;
   margin-right: 20px;
-  position: relative; }
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
 
 .progress-res {
   margin: 0;
@@ -1630,8 +1632,7 @@ table {
   stroke-width: 2.8;
   stroke-linecap: round;
   -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-  stroke-dasharray: 100, 100; }
+          animation: progress 1s ease-out forwards; }
 
 @media screen and (max-width: 991px) {
   .progress-description p {

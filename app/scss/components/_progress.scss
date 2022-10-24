@@ -6,6 +6,7 @@
 		place-items: center;
 		margin-right: 20px;
 		position: relative;
+		flex-shrink: 0;
 	}
 	&-res {
 		margin: 0;
@@ -31,7 +32,6 @@
 		stroke-width: 2.8;
 		stroke-linecap: round;
 		animation: progress 1s ease-out forwards;
-		stroke-dasharray: 100, 100;
 	}
 }
 
