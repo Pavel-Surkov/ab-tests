@@ -8,6 +8,20 @@
 		@include font(1.6rem, calc(24 / 16));
 		padding: 0.625em 1em;
 		font-weight: 600;
+		&::after {
+			border-top: 6px solid;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			transform: translateY(2px);
+		}
+		&-sm {
+			font-weight: 500;
+			min-width: 160px;
+			@include font(1.2rem, calc(18 / 12));
+			padding: 0.667em 1.208em;
+			filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.1));
+			border-radius: 2px;
+		}
 	}
 	&-green {
 		text-align: center;

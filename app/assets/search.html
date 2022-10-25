@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<title>AB tests</title>
+	<title>Search Results Page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,61 +15,335 @@
 	<!-- <link rel="icon" type="image/png" href="" sizes="96x96"> -->
 	<!-- <link rel="apple-touch-icon" sizes="152x152" href=""> -->
 	<!-- favicon -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link href="css/application.css" rel="stylesheet">
 </head>
 
 <body>
-	<!-- Begin header -->
-	<header class="header">
-	</header>
-	<!-- End header -->
 	<!-- Begin main -->
-	<main class="main profile d-flex">
-		<nav class="h-100 navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand title title_size-l" href="#">Navbar</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Dropdown
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
-					</li>
-				</ul>
+	<main class="main search">
+		<aside id="mobile-header" class="h-lg-100 aside-primary">
+			<nav class="navbar navbar-expand-lg flex-lg-column">
+				<a class="navbar-brand text-center text-uppercase p-0 mt-lg-5 mx-lg-auto" href="#">Brght</a>
+				<div class="header-notification d-flex d-lg-none align-items-center">
+					<button type="button" class="header-notification-btn new-messages p-0 d-flex justify-center align-center">
+						<img width="17" height="20" src="./img/icons/notification.svg" alt="notification">
+					</button>
+				</div>
+				<button class="d-lg-none navbar-toggler" type="button" data-toggle="collapse" id="m-menu-toggle"
+					data-target="#m-menu" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+				</button>
+				<div class="navbar-profile w-100 d-none d-lg-flex align-items-center">
+					<div>
+						<img width="30" height="30" src="./img/Jacques.png" alt="profile image" />
+					</div>
+					<div class="navbar-profile__info">
+						<h3 class="title title_size-xs">Jacques Huppes</h3>
+						<p class="m-0">Data scientist</p>
+					</div>
+				</div>
+				<div class="collapse d-none d-lg-block navbar-collapse w-100">
+					<ul class="navbar-nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link p-0 d-flex align-items-center" href="#">
+								<img width="16" height="16" src="./img/icons/profile.png" alt="" />
+								Profile
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link p-0 d-flex align-items-center" href="#">
+								<img width="16" height="16" src="./img/icons/create-test.png" alt="" />
+								Create Test
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link p-0 d-flex align-items-center" href="#">
+								<img width="16" height="16" src="./img/icons/test-results.png" alt="" />
+								Test Results
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+								<img width="16" height="16" src="./img/icons/personality-type.png" alt="" />
+								Personality type
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+								<img width="16" height="16" src="./img/icons/personality-test.png" alt="" />
+								Personality test
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="badges d-none d-lg-block px-3">
+				<h2 class="badges-title mb-4">Badges</h2>
+				<div class="badges-wrapper">
+					<button class="badge badge-white text-start w-100">Top 85% of the TU Delft</button>
+					<button class="badge badge-white text-start w-100">Top 91% of Amsterdam</button>
+					<button class="badge badge-white text-start w-100">Top 72% of data scientists</button>
+					<button class="badge badge-white text-start w-100">Top 93% of the Netherlands</button>
+				</div>
 			</div>
-		</nav>
+		</aside>
+		<div class="content">
+			<!-- Begin header -->
+			<header class="header d-flex align-center flex-column flex-lg-row pt-lg-5">
+				<a class="header-brand d-inline-block" href="#">Profile Page</a>
+				<form class="header-search">
+					<input type="text" class="w-100 search-input form-control" placeholder="Search" id="search" />
+					<button type="submit" class="search-btn">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M6.85946 4.08925C8.48684 4.47807 9.7184 5.71999 9.99654 7.25326C10.0285 7.42851 10.1925 7.55273 10.3785 7.55273C10.3999 7.55273 10.4214 7.55116 10.4432 7.54769C10.6546 7.51482 10.7971 7.3297 10.7616 7.13431C10.4325 5.32193 8.977 3.85377 7.05307 3.39435C6.84552 3.34466 6.6341 3.46008 6.58066 3.65221C6.52739 3.8439 6.6521 4.03973 6.85946 4.08925Z"
+								fill="#27747A" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12.3865 14.7973C12.1093 14.5217 11.9564 14.1552 11.9564 13.7656C11.9564 13.7625 11.9564 13.7593 11.9564 13.7561C11.9593 13.3045 11.9347 12.8011 11.6142 12.4828C11.2462 12.1172 10.6614 12.1078 10.2266 12.3908C9.2454 13.0292 8.07323 13.401 6.81514 13.401C3.37286 13.401 0.572247 10.6194 0.572247 7.20051C0.572247 3.7816 3.37286 1 6.81514 1C10.2574 1 13.058 3.7816 13.058 7.20051C13.058 8.44554 12.6865 9.6057 12.0479 10.5781C11.7607 11.0153 11.7703 11.6062 12.1415 11.9747C12.4583 12.2893 12.9542 12.3141 13.4005 12.3068C13.4087 12.3067 13.4169 12.3066 13.4251 12.3066C13.8176 12.3066 14.1866 12.4584 14.4638 12.734L18.1361 16.3813C18.4135 16.6569 18.5664 17.0232 18.5664 17.413C18.5664 17.8025 18.4135 18.169 18.1361 18.4446C17.8499 18.7291 17.4737 18.8711 17.0974 18.8711C16.7213 18.8711 16.3452 18.7291 16.0588 18.4446L12.3865 14.7973ZM6.81423 1.72949C3.77699 1.72949 1.30585 4.1838 1.30585 7.20048C1.30585 10.2171 3.77699 12.6715 6.81423 12.6715C9.85153 12.6715 12.3226 10.2171 12.3226 7.20048C12.3226 4.1838 9.85153 1.72949 6.81423 1.72949ZM12.9051 14.2815L16.5774 17.9288C16.8638 18.2133 17.3298 18.2131 17.6162 17.9288C17.7547 17.791 17.8311 17.6078 17.8311 17.413C17.8311 17.2182 17.7547 17.035 17.6162 16.8972L13.944 13.2498C13.8052 13.112 13.6207 13.0361 13.4246 13.0361C13.2283 13.0361 13.0438 13.112 12.9051 13.2498C12.7664 13.3876 12.6902 13.5709 12.6902 13.7657C12.6902 13.9604 12.7664 14.1437 12.9051 14.2815Z"
+								fill="#27747A" />
+							<path
+								d="M12.3865 14.7973L12.0342 15.152L12.034 15.1519L12.3865 14.7973ZM14.4638 12.734L14.1115 13.0888L14.1113 13.0886L14.4638 12.734ZM18.1361 16.3813L17.7837 16.7361H17.7837L18.1361 16.3813ZM18.1361 18.4446L17.7836 18.09L17.7837 18.0898L18.1361 18.4446ZM16.0588 18.4446L16.4111 18.0898L16.0588 18.4446ZM12.9051 14.2815L12.5528 14.6362L12.9051 14.2815ZM16.5774 17.9288L16.225 18.2835L16.5774 17.9288ZM17.6162 17.9288L17.9688 18.2833L17.9684 18.2837L17.6162 17.9288ZM17.6162 16.8972L17.9686 16.5424L17.9688 16.5427L17.6162 16.8972ZM13.944 13.2498L14.2963 12.8951L13.944 13.2498ZM13.4005 12.3068L13.4087 12.8067L13.4005 12.3068ZM12.0479 10.5781L11.6299 10.3036L12.0479 10.5781ZM10.2266 12.3908L10.4993 12.8098L10.2266 12.3908ZM11.9564 13.7561L12.4564 13.7593L11.9564 13.7561ZM12.034 15.1519C11.6628 14.7829 11.4564 14.289 11.4564 13.7656H12.4564C12.4564 14.0215 12.5557 14.2605 12.739 14.4427L12.034 15.1519ZM11.4564 13.7656C11.4564 13.7614 11.4564 13.7571 11.4564 13.7529L12.4564 13.7593C12.4564 13.7614 12.4564 13.7635 12.4564 13.7656H11.4564ZM10.4993 12.8098C9.43955 13.4994 8.17309 13.901 6.81514 13.901V12.901C7.97338 12.901 9.05126 12.559 9.95385 11.9717L10.4993 12.8098ZM6.81514 13.901C3.09993 13.901 0.0722466 10.8988 0.0722466 7.20051H1.07225C1.07225 10.3401 3.64578 12.901 6.81514 12.901V13.901ZM0.0722466 7.20051C0.0722466 3.50225 3.09993 0.5 6.81514 0.5V1.5C3.64578 1.5 1.07225 4.06095 1.07225 7.20051H0.0722466ZM6.81514 0.5C10.5303 0.5 13.558 3.50225 13.558 7.20051H12.558C12.558 4.06095 9.98449 1.5 6.81514 1.5V0.5ZM13.558 7.20051C13.558 8.54655 13.156 9.80159 12.4658 10.8525L11.6299 10.3036C12.2169 9.4098 12.558 8.34453 12.558 7.20051H13.558ZM13.3924 11.8069C13.4033 11.8067 13.4142 11.8066 13.4251 11.8066V12.8066C13.4196 12.8066 13.4141 12.8066 13.4087 12.8067L13.3924 11.8069ZM13.4251 11.8066C13.9491 11.8066 14.4449 12.0103 14.8163 12.3794L14.1113 13.0886C13.9282 12.9066 13.6861 12.8066 13.4251 12.8066V11.8066ZM14.8162 12.3793L18.4884 16.0266L17.7837 16.7361L14.1115 13.0888L14.8162 12.3793ZM18.4884 16.0266C18.86 16.3956 19.0664 16.8893 19.0664 17.413H18.0664C18.0664 17.157 17.9671 16.9183 17.7837 16.7361L18.4884 16.0266ZM19.0664 17.413C19.0664 17.9363 18.86 18.4303 18.4884 18.7993L17.7837 18.0898C17.9671 17.9077 18.0664 17.6688 18.0664 17.413H19.0664ZM18.4886 18.7992C18.1041 19.1814 17.5992 19.3711 17.0974 19.3711V18.3711C17.3483 18.3711 17.5957 18.2768 17.7836 18.09L18.4886 18.7992ZM17.0974 19.3711C16.5958 19.3711 16.091 19.1813 15.7064 18.7993L16.4111 18.0898C16.5994 18.2768 16.8469 18.3711 17.0974 18.3711V19.3711ZM15.7064 18.7993L12.0342 15.152L12.7389 14.4425L16.4111 18.0898L15.7064 18.7993ZM6.81423 2.22949C4.04991 2.22949 1.80585 4.46315 1.80585 7.20048H0.805851C0.805851 3.90445 3.50407 1.22949 6.81423 1.22949V2.22949ZM1.80585 7.20048C1.80585 9.93775 4.04992 12.1715 6.81423 12.1715V13.1715C3.50406 13.1715 0.805851 10.4965 0.805851 7.20048H1.80585ZM6.81423 12.1715C9.5786 12.1715 11.8226 9.93776 11.8226 7.20048H12.8226C12.8226 10.4964 10.1245 13.1715 6.81423 13.1715V12.1715ZM11.8226 7.20048C11.8226 4.46315 9.5786 2.22949 6.81423 2.22949V1.22949C10.1245 1.22949 12.8226 3.90445 12.8226 7.20048H11.8226ZM13.2575 13.9267L16.9297 17.574L16.225 18.2835L12.5528 14.6362L13.2575 13.9267ZM16.9297 17.574C17.021 17.6647 17.1723 17.6649 17.264 17.5739L17.9684 18.2837C17.4872 18.7612 16.7066 18.7619 16.225 18.2835L16.9297 17.574ZM17.2636 17.5743C17.3082 17.5299 17.3311 17.474 17.3311 17.413H18.3311C18.3311 17.7415 18.2012 18.0521 17.9688 18.2833L17.2636 17.5743ZM17.3311 17.413C17.3311 17.3519 17.3082 17.2961 17.2636 17.2516L17.9688 16.5427C18.2012 16.7739 18.3311 17.0845 18.3311 17.413H17.3311ZM17.2639 17.2519L13.5916 13.6046L14.2963 12.8951L17.9686 16.5424L17.2639 17.2519ZM13.5916 13.6046C13.5468 13.5601 13.4892 13.5361 13.4246 13.5361V12.5361C13.7523 12.5361 14.0636 12.6639 14.2963 12.8951L13.5916 13.6046ZM13.4246 13.5361C13.3598 13.5361 13.3022 13.5602 13.2575 13.6046L12.5528 12.8951C12.7855 12.6639 13.0967 12.5361 13.4246 12.5361V13.5361ZM13.2575 13.6046C13.2131 13.6487 13.1902 13.7042 13.1902 13.7657H12.1902C12.1902 13.4375 12.3196 13.1266 12.5528 12.8951L13.2575 13.6046ZM13.1902 13.7657C13.1902 13.8271 13.2131 13.8827 13.2575 13.9267L12.5528 14.6362C12.3196 14.4047 12.1902 14.0938 12.1902 13.7657H13.1902ZM12.4938 11.6199C12.642 11.7671 12.9214 11.8145 13.3924 11.8069L13.4087 12.8067C12.987 12.8136 12.2745 12.8114 11.7892 12.3295L12.4938 11.6199ZM12.4658 10.8525C12.2838 11.1297 12.3221 11.4494 12.4938 11.6199L11.7892 12.3295C11.2186 11.7629 11.2377 10.9009 11.6299 10.3036L12.4658 10.8525ZM11.2619 12.8375C11.0911 12.6679 10.7745 12.6307 10.4993 12.8098L9.95385 11.9717C10.5482 11.5849 11.4012 11.5665 11.9666 12.128L11.2619 12.8375ZM11.4564 13.7529C11.4579 13.5312 11.4514 13.3375 11.4169 13.1705C11.3833 13.0075 11.3297 12.9048 11.2619 12.8375L11.9666 12.128C12.2193 12.379 12.3382 12.6872 12.3963 12.9683C12.4535 13.2456 12.4579 13.5294 12.4564 13.7593L11.4564 13.7529Z"
+								fill="#27747A" />
+						</svg>
+					</button>
+				</form>
+				<div class="header-notification d-none d-lg-flex align-items-center">
+					<button type="button" class="header-notification-btn new-messages p-0 d-flex justify-center align-center">
+						<img width="17" height="20" src="./img/icons/notification.svg" alt="notification" />
+					</button>
+				</div>
+				<div class="header-profile d-none d-lg-flex align-items-center">
+					<div class="dropdown d-flex align-items-center">
+						<img class="header-profile-img" width="30" height="30" src="./img/Jacques.png" alt="profile image" />
+						<button class="header-profile-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Jacques Huppes
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a class="dropdown-item" href="#">Settings</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<!-- End header -->
+			<div class="content-wrapper">
+				<h2 class="title title_size-l search-results-title">Data Scientists</h2>
+				<div class="d-lg-flex">
+					<div class="content-main flex-grow-1">
+						<div class="filter d-flex">
+							<div class="dropdown d-flex order-0 order-lg-1">
+								<button class="btn-orange btn-orange-sm filter-dropdown dropdown-toggle" type="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Select Occupation
+								</button>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#">Other</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Other</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-table">
+							<header class="d-none d-lg-flex search-table-row search-table-header">
+								<p class="text_gray"><b>Name</b></p>
+								<p>Rank</p>
+								<p>BRGHT Sccore</p>
+								<p>Numerical</p>
+								<p>Logical</p>
+								<p>Spatial</p>
+								<p>Results</p>
+							</header>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+							<div class="search-table-row">
+								<div class="search-table-name d-flex align-items-center">
+									<img width="30" height="30" src="./img/Jacques.png" alt="" />
+									<div class="search-table-name-col d-flex flex-column d-lg-block">
+										<p>
+											<a href="#">Jacques Huppes</a>
+										</p>
+										<span class="d-block d-lg-none">BRGHT Score: <i>93%</i></span>
+										<span class="d-block d-lg-none">Rank: <i>#4827</i></span>
+									</div>
+								</div>
+								<p class="table-item-desktop">#4827</p>
+								<p class="table-item-desktop">93%</p>
+								<p class="table-item-desktop">87%</p>
+								<p class="table-item-desktop">89%</p>
+								<p class="table-item-desktop">93%</p>
+								<button type="button" class="table-item-desktop btn btn-green">Improve results</button>
+							</div>
+						</div>
+					</div>
+					<div class="content-additional flex-shrink-0"></div>
+				</div>
+			</div>
+		</div>
 	</main>
 	<!-- End main -->
 	<!-- Begin footer -->
-	<footer class="footer">
-	</footer>
+	<!-- <footer class="footer"></footer> -->
 	<!-- End footer -->
+	<div id="blocker" class="blocker"></div>
 	<!-- BEGIN MOBILE LAYOUT -->
+	<div class="m-menu d-lg-none" id="m-menu">
+		<div class="navbar-profile w-100 d-flex align-items-center">
+			<div>
+				<img width="30" height="30" src="./img/Jacques.png" alt="profile image" />
+			</div>
+			<div class="navbar-profile__info">
+				<h3 class="title title_size-xs">Jacques Huppes</h3>
+				<p class="m-0">Data scientist</p>
+			</div>
+		</div>
+		<div class="navbar-collapse w-100">
+			<ul class="navbar-nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/profile.png" alt="" />
+						Profile
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/create-test.png" alt="" />
+						Create Test
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/test-results.png" alt="" />
+						Test Results
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/personality-type.png" alt="" />
+						Personality type
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled p-0 d-flex align-items-center" href="#">
+						<img width="16" height="16" src="./img/icons/personality-test.png" alt="" />
+						Personality test
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="badges px-3">
+			<h2 class="badges-title mb-4">Badges</h2>
+			<div class="badges-wrapper">
+				<button class="badge badge-white text-start w-100">Top 85% of the TU Delft</button>
+				<button class="badge badge-white text-start w-100">Top 91% of Amsterdam</button>
+				<button class="badge badge-white text-start w-100">Top 72% of data scientists</button>
+				<button class="badge badge-white text-start w-100">Top 93% of the Netherlands</button>
+			</div>
+		</div>
+	</div>
 	<!-- END MOBILE LAYOUT -->
 	<!-- BEGIN scripts -->
-	<script type="text/javascript"
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
 	<script src="js/application.js"></script>
 	<!--END scripts-->
 </body>

@@ -94,12 +94,13 @@ $include-column-box-sizing: true !default;
 @import 'components/button', 'components/link';
 
 // 6. Page-specific styles
-@import 'pages/profile';
+@import 'pages/profile', 'pages/search';
 
 // 7. Components
-@import 'components/button', 'components/title', 'components/navbar', 'components/badges', 'components/badge',
-	'components/content', 'components/search', 'components/goback', 'components/profile', 'components/copy-btn',
-	'components/summary', 'components/progress', 'components/results';
+@import 'components/title', 'components/navbar', 'components/badges', 'components/badge', 'components/content',
+	'components/search', 'components/goback', 'components/profile', 'components/copy-btn', 'components/summary',
+	'components/progress', 'components/results', 'components/search-results', 'components/filter',
+	'components/search-table';
 
 // 8. Themes
 @import 'themes/default';
