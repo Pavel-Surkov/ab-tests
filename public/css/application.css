@@ -944,7 +944,8 @@ table {
   .header-search datalist {
     width: 100%;
     position: absolute;
-    background: red; }
+    background: red;
+    min-height: 200px; }
 
 .header-notification {
   margin-right: 42px; }
