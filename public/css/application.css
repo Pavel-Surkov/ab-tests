@@ -941,6 +941,10 @@ table {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
+  .header-search datalist {
+    width: 100%;
+    position: absolute;
+    background: red; }
 
 .header-notification {
   margin-right: 42px; }
@@ -1151,12 +1155,16 @@ table {
   .search .content-wrapper {
     margin-top: 45px;
     padding-bottom: 48px; }
+  .search .content-main {
+    margin-right: 14px; }
 
 @media screen and (max-width: 991px) {
   .search {
     grid-template-columns: 100%; }
     .search .content-wrapper {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+    .search .content-main {
+      margin-right: 0; } }
 
 .title {
   font-family: "Poppins", Arial, sans-serif;
@@ -1413,6 +1421,8 @@ table {
   .content {
     padding: 54px 20px 0; }
     .content-wrapper {
+      margin-top: 20px; }
+    .content-additional {
       margin-top: 20px; }
     .content-section:not(:first-child) {
       margin-top: 30px; }
@@ -1780,6 +1790,29 @@ table {
     font-style: normal;
     font-weight: 600;
     color: #27747a; } }
+
+.categories-dropdown {
+  color: #fffcf8;
+  background: #27747a;
+  font-size: 1.4rem;
+  line-height: calc(21 / 14);
+  font-weight: 400;
+  text-align: left;
+  padding: 11px 12px;
+  position: relative;
+  width: 100%; }
+  .categories-dropdown::after {
+    content: '';
+    position: absolute;
+    border: none;
+    top: 50%;
+    right: 14px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 8px;
+    height: 4px;
+    background: url("../img/icons/chevron.svg") no-repeat 50%/cover; }
 
 @media screen and (max-width: 991px) {
   .table-item-desktop {

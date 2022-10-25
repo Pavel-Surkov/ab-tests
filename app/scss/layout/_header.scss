@@ -18,6 +18,11 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+		& datalist {
+			width: 100%;
+			position: absolute;
+			background: red;
+		}
 	}
 	&-notification {
 		margin-right: 42px;

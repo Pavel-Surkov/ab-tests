@@ -7,6 +7,9 @@
 		margin-top: 45px;
 		padding-bottom: 48px;
 	}
+	& .content-main {
+		margin-right: 14px;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -14,6 +17,9 @@
 		grid-template-columns: 100%;
 		& .content-wrapper {
 			margin-top: 20px;
+		}
+		& .content-main {
+			margin-right: 0;
 		}
 	}
 }

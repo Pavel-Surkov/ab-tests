@@ -95,7 +95,15 @@
 			<header class="header d-flex align-center flex-column flex-lg-row pt-lg-5">
 				<a class="header-brand d-inline-block" href="#">Profile Page</a>
 				<form class="header-search">
-					<input type="text" class="w-100 search-input form-control" placeholder="Search" id="search" />
+					<input type="text" class="w-100 search-input form-control" placeholder="Search" list="datalistOptions"
+						id="search" />
+					<datalist id="datalistOptions">
+						<option value="Value 1">
+						<option value="Value 2">
+						<option value="Value 3">
+						<option value="Value 4">
+						<option value="Value 5">
+					</datalist>
 					<button type="submit" class="search-btn">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"

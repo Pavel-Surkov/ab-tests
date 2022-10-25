@@ -1,0 +1,23 @@
+.categories {
+	&-dropdown {
+		color: $light-200;
+		background: $green-dark-300;
+		@include font(1.4rem, calc(21 / 14));
+		font-weight: 400;
+		text-align: left;
+		padding: 11px 12px;
+		position: relative;
+		width: 100%;
+		&::after {
+			content: '';
+			position: absolute;
+			border: none;
+			top: 50%;
+			right: 14px;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 4px;
+			background: icon('chevron.svg') no-repeat 50% / cover;
+		}
+	}
+}
