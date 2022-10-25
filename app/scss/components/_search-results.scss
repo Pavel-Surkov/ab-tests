@@ -4,3 +4,13 @@
 		margin-bottom: 20px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.search {
+		&-results {
+			&-title {
+				margin-bottom: 12px;
+			}
+		}
+	}
+}

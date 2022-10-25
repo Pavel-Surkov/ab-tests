@@ -926,7 +926,8 @@ table {
   font-family: "AbrilFatface", sans-serif;
   color: #27747a;
   text-decoration: none;
-  margin-right: auto; }
+  margin-right: auto;
+  text-transform: capitalize; }
 
 .header-search {
   position: relative;
@@ -1108,7 +1109,16 @@ table {
   .btn-orange {
     font-size: 1.4rem;
     line-height: calc(21 / 14);
-    min-width: 240px; } }
+    min-width: 240px; }
+    .btn-orange-sm {
+      font-weight: 500;
+      min-width: 160px;
+      font-size: 1.2rem;
+      line-height: calc(18 / 12);
+      padding: 0.667em 1.208em;
+      -webkit-filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.1));
+              filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.1));
+      border-radius: 2px; } }
 
 .link {
   font-size: 1.4rem;
@@ -1144,7 +1154,9 @@ table {
 
 @media screen and (max-width: 991px) {
   .search {
-    grid-template-columns: 100%; } }
+    grid-template-columns: 100%; }
+    .search .content-wrapper {
+      margin-top: 20px; } }
 
 .title {
   font-family: "Poppins", Arial, sans-serif;
@@ -1685,9 +1697,17 @@ table {
   font-weight: 400;
   margin-bottom: 20px; }
 
+@media screen and (max-width: 991px) {
+  .search-results-title {
+    margin-bottom: 12px; } }
+
 .filter {
   gap: 20px;
   margin-bottom: 20px; }
+
+@media screen and (max-width: 991px) {
+  .filter {
+    gap: 4px; } }
 
 .search-table {
   background: #fff;

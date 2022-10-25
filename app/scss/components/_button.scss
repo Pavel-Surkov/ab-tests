@@ -40,6 +40,14 @@
 		&-orange {
 			@include font(1.4rem, calc(21 / 14));
 			min-width: 240px;
+			&-sm {
+				font-weight: 500;
+				min-width: 160px;
+				@include font(1.2rem, calc(18 / 12));
+				padding: 0.667em 1.208em;
+				filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.1));
+				border-radius: 2px;
+			}
 		}
 	}
 }
