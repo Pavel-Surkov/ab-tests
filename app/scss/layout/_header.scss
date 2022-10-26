@@ -6,6 +6,9 @@
 		text-decoration: none;
 		margin-right: auto;
 		text-transform: capitalize;
+		&:hover {
+			color: $green-dark-300;
+		}
 	}
 	&-search {
 		position: relative;

@@ -928,6 +928,8 @@ table {
   text-decoration: none;
   margin-right: auto;
   text-transform: capitalize; }
+  .header-brand:hover {
+    color: #27747a; }
 
 .header-search {
   position: relative;
