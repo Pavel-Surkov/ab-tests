@@ -30,3 +30,18 @@ document.addEventListener(`DOMContentLoaded`, () => {});
     circleElement.style.strokeDasharray = `${scoreInPercent}, 100`;
   });
 })();
+
+// Function for dropdowns
+(function toggleDropdowns() {
+  const buttons = document.querySelectorAll('.drop-btn');
+
+  buttons.forEach((btn) => {
+    const dropdown = btn.nextElementSibling;
+
+    if (dropdown.matches('.dropdown-toggle-menu')) {
+      btn.addEventListener('click', () => {
+        dropdown.classList.toggle('opened');
+      });
+    }
+  });
+})();

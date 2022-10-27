@@ -27,6 +27,7 @@
 		&-dropdown {
 			font-weight: 500;
 			text-align: left;
+			// min-width: 258px;
 			&::after {
 				position: absolute;
 				right: 16px;
@@ -35,6 +36,9 @@
 				border-top: 0.5em solid;
 				border-left: 0.4em solid transparent;
 				border-right: 0.4em solid transparent;
+			}
+			&__wrapper {
+				position: relative;
 			}
 		}
 	}
@@ -96,6 +100,11 @@
 			&-title {
 				margin: 0;
 				@include font(1.6rem, calc(24 / 16));
+			}
+			&-dropdown {
+				&__wrapper {
+					max-width: fit-content;
+				}
 			}
 		}
 		&-card {

@@ -233,19 +233,20 @@
 						<div
 							class="content-section-top d-flex flex-column flex-lg-row justify-content-between align-items-lg-center">
 							<h2 class="content-section-title order-1">Overall Cognitive Ability Score: <b>96%</b></h2>
-							<div class="dropdown d-flex order-0 order-lg-1">
-								<button class="btn-orange content-section-dropdown dropdown-toggle" type="button"
-									data-bs-toggle="dropdown" aria-expanded="false">
-									Data scientists
+							<div class="content-section-dropdown__wrapper d-flex order-0 order-lg-1">
+								<button class="btn-orange content-section-dropdown dropdown-toggle drop-btn" type="button">
+									Data Scientists
 								</button>
-								<ul class="dropdown-menu">
-									<li>
-										<a class="dropdown-item" href="#">Other</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Other</a>
-									</li>
-								</ul>
+								<div class="dropdown-toggle-menu">
+									<div class="position-relative">
+										<input class="form-control" list="dataScientists" placeholder="Type to search...">
+										<datalist id="dataScientists">
+											<option value="Value 1">
+											<option value="Value 2">
+											<option value="Value 3">
+										</datalist>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="content-section-wrapper">

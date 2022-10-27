@@ -147,19 +147,20 @@
 				<div class="d-lg-flex">
 					<div class="content-main flex-grow-1">
 						<div class="filter d-flex">
-							<div class="dropdown d-flex order-0 order-lg-1">
-								<button class="btn-orange btn-orange-sm filter-dropdown dropdown-toggle" type="button"
-									data-bs-toggle="dropdown" aria-expanded="false">
+							<div class="position-relative d-flex order-0 order-lg-1">
+								<button class="btn-orange btn-orange-sm filter-dropdown dropdown-toggle drop-btn" type="button">
 									Select Occupation
 								</button>
-								<ul class="dropdown-menu">
-									<li>
-										<a class="dropdown-item" href="#">Other</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Other</a>
-									</li>
-								</ul>
+								<div class="dropdown-toggle-menu">
+									<div class="position-relative">
+										<input class="form-control" list="occupation" placeholder="Type to search...">
+										<datalist id="occupation">
+											<option value="Value 1">
+											<option value="Value 2">
+											<option value="Value 3">
+										</datalist>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="search-table">

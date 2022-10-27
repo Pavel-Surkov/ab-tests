@@ -1389,6 +1389,8 @@ table {
       border-top: 0.5em solid;
       border-left: 0.4em solid transparent;
       border-right: 0.4em solid transparent; }
+    .content-section-dropdown__wrapper {
+      position: relative; }
   .content-card {
     padding: 10px 12px;
     border-radius: 8px;
@@ -1440,6 +1442,10 @@ table {
       margin: 0;
       font-size: 1.6rem;
       line-height: calc(24 / 16); }
+    .content-section-dropdown__wrapper {
+      max-width: -webkit-fit-content;
+      max-width: -moz-fit-content;
+      max-width: fit-content; }
     .content-card {
       margin-bottom: 12px;
       padding: 12px 13px 7px;
@@ -1816,6 +1822,27 @@ table {
     width: 8px;
     height: 4px;
     background: url("../img/icons/chevron.svg") no-repeat 50%/cover; }
+
+.dropdown-toggle-menu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-transform: translateY(calc(100% + 4px));
+      -ms-transform: translateY(calc(100% + 4px));
+          transform: translateY(calc(100% + 4px));
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .dropdown-toggle-menu.opened {
+    opacity: 1;
+    pointer-events: auto; }
 
 @media screen and (max-width: 991px) {
   .table-item-desktop {

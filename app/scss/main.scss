@@ -100,7 +100,7 @@ $include-column-box-sizing: true !default;
 @import 'components/title', 'components/navbar', 'components/badges', 'components/badge', 'components/content',
 	'components/search', 'components/goback', 'components/profile', 'components/copy-btn', 'components/summary',
 	'components/progress', 'components/results', 'components/search-results', 'components/filter',
-	'components/search-table', 'components/categories';
+	'components/search-table', 'components/categories', 'components/dropdown-toggle';
 
 // 8. Themes
 @import 'themes/default';
