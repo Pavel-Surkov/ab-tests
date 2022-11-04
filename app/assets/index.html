@@ -95,15 +95,16 @@
 			<header class="header d-flex align-center flex-column flex-lg-row pt-lg-5">
 				<a class="header-brand d-inline-block" href="#">Profile Page</a>
 				<form class="header-search">
-					<input type="text" class="w-100 search-input form-control" placeholder="Search" list="datalistOptions"
-						id="search" />
-					<datalist id="datalistOptions">
-						<option value="Value 1">
-						<option value="Value 2">
-						<option value="Value 3">
-						<option value="Value 4">
-						<option value="Value 5">
-					</datalist>
+					<div class="position-relative">
+						<input type="text" class="w-100 search-input form-control dropdown-input" placeholder="Search"
+							id="search" />
+						<div class="dropdown-toggle-list">
+							<button type="button" class="dropdown-toggle-item">Value 1</button>
+							<button type="button" class="dropdown-toggle-item">Value 2</button>
+							<button type="button" class="dropdown-toggle-item">Value 3</button>
+							<button type="button" class="dropdown-toggle-item">Value 4</button>
+						</div>
+					</div>
 					<button type="submit" class="search-btn">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
@@ -239,12 +240,13 @@
 								</button>
 								<div class="dropdown-toggle-menu">
 									<div class="position-relative">
-										<input class="form-control" list="dataScientists" placeholder="Type to search...">
-										<datalist id="dataScientists">
-											<option value="Value 1">
-											<option value="Value 2">
-											<option value="Value 3">
-										</datalist>
+										<input class="form-control dropdown-input" placeholder="Type to search...">
+										<div class="dropdown-toggle-list">
+											<button type="button" class="dropdown-toggle-item">Value 1</button>
+											<button type="button" class="dropdown-toggle-item">Value 2</button>
+											<button type="button" class="dropdown-toggle-item">Value 3</button>
+											<button type="button" class="dropdown-toggle-item">Value 4</button>
+										</div>
 									</div>
 								</div>
 							</div>

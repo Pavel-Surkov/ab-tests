@@ -46,3 +46,24 @@ document.addEventListener(`DOMContentLoaded`, () => {});
     }
   });
 })();
+
+//
+(function setOptionValue() {
+  const dropdownInputs = document.querySelectorAll('.dropdown-input');
+
+  dropdownInputs.forEach((input) => {
+    const dropdownList = input.nextElementSibling;
+
+    if (dropdownList.matches('.dropdown-toggle-list')) {
+      dropdownList.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if (target.matches('button')) {
+          const btnText = target.textContent;
+
+          input.value = btnText;
+        }
+      });
+    }
+  });
+})();

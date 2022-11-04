@@ -17,4 +17,23 @@
 			pointer-events: auto;
 		}
 	}
+	&-list {
+		background: $white;
+		position: absolute;
+		top: calc(100% + 3px);
+		width: 100%;
+		max-height: 120px;
+		box-shadow: 0 0 5px rgba($black, 0.2);
+		z-index: 1;
+		overflow-y: auto;
+	}
+	&-item {
+		width: 100%;
+		text-align: left;
+		padding: 4px 7.5px;
+		@include font(1.4rem, 1);
+		&:hover {
+			background: rgba($black, 0.1);
+		}
+	}
 }
